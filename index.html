@@ -38,63 +38,66 @@ html
             display: inline-block;
             text-shadow: 2px 2px 8px #ff00ff, -2px -2px 8px #00ffff;
         }
-        /* Letter-specific animations */
         .letter:nth-child(5n+1) { animation: colorFlash1 1s infinite, wave 1.5s infinite; }
         .letter:nth-child(5n+2) { animation: colorFlash2 1.2s infinite, wave 1.5s infinite 0.1s; }
         .letter:nth-child(5n+3) { animation: colorFlash3 1.4s infinite, wave 1.5s infinite 0.2s; }
         .letter:nth-child(5n+4) { animation: colorFlash4 1.6s infinite, wave 1.5s infinite 0.3s; }
         .letter:nth-child(5n)   { animation: colorFlash5 1.8s infinite, wave 1.5s infinite 0.4s; }
         @keyframes colorFlash1 {
-            0% { color: #ff0000; }
-            33% { color: #00ff00; }
-            66% { color: #0000ff; }
-            100% { color: #ff0000; }
+            0% { color: #ff0000; } 33% { color: #00ff00; } 66% { color: #0000ff; } 100% { color: #ff0000; }
         }
         @keyframes colorFlash2 {
-            0% { color: #00ffff; }
-            33% { color: #ff00ff; }
-            66% { color: #ffff00; }
-            100% { color: #00ffff; }
+            0% { color: #00ffff; } 33% { color: #ff00ff; } 66% { color: #ffff00; } 100% { color: #00ffff; }
         }
         @keyframes colorFlash3 {
-            0% { color: #ff9900; }
-            33% { color: #00ff00; }
-            66% { color: #ff00ff; }
-            100% { color: #ff9900; }
+            0% { color: #ff9900; } 33% { color: #00ff00; } 66% { color: #ff00ff; } 100% { color: #ff9900; }
         }
         @keyframes colorFlash4 {
-            0% { color: #0000ff; }
-            33% { color: #ffff00; }
-            66% { color: #ff0000; }
-            100% { color: #0000ff; }
+            0% { color: #0000ff; } 33% { color: #ffff00; } 66% { color: #ff0000; } 100% { color: #0000ff; }
         }
         @keyframes colorFlash5 {
-            0% { color: #ff00ff; }
-            33% { color: #00ffff; }
-            66% { color: #00ff00; }
-            100% { color: #ff00ff; }
+            0% { color: #ff00ff; } 33% { color: #00ffff; } 66% { color: #00ff00; } 100% { color: #ff00ff; }
         }
         @keyframes wave {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); }
         }
-        /* Bouncing Hedgehogs */
+        /* Bouncing Hedgehogs (Screensaver Style) */
         .hedgehog {
             position: absolute;
             width: 100px;
-            animation: bounce 6s linear infinite;
             z-index: 1;
         }
-        #hedge1 { animation-delay: 0s; }
-        #hedge2 { animation-delay: 1.5s; }
-        #hedge3 { animation-delay: 3s; }
-        #hedge4 { animation-delay: 4.5s; }
-        @keyframes bounce {
-            0%   { top: 0%; left: 0%; }
-            25%  { top: 0%; left: calc(100% - 100px); }
-            50%  { top: calc(100% - 100px); left: calc(100% - 100px); }
-            75%  { top: calc(100% - 100px); left: 0%; }
-            100% { top: 0%; left: 0%; }
+        #hedge1 { top: 10%; left: 10%; animation: screensaver1 5s infinite linear; }
+        #hedge2 { top: 20%; left: 60%; animation: screensaver2 6s infinite linear; }
+        #hedge3 { top: 70%; left: 30%; animation: screensaver3 4s infinite linear; }
+        #hedge4 { top: 50%; left: 80%; animation: screensaver4 5.5s infinite linear; }
+        @keyframes screensaver1 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(calc(90vw - 100px), 0); }
+            50% { transform: translate(calc(90vw - 100px), calc(90vh - 100px)); }
+            75% { transform: translate(0, calc(90vh - 100px)); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes screensaver2 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-50vw, 40vh); }
+            50% { transform: translate(30vw, -30vh); }
+            75% { transform: translate(-20vw, 60vh); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes screensaver3 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(60vw, -20vh); }
+            50% { transform: translate(-40vw, 50vh); }
+            75% { transform: translate(50vw, 10vh); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes screensaver4 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-70vw, 30vh); }
+            50% { transform: translate(20vw, -40vh); }
+            75% { transform: translate(-30vw, 50vh); }
+            100% { transform: translate(0, 0); }
         }
         /* Scaling Smileys */
         .smiley {

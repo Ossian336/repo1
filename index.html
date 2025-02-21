@@ -1,8 +1,71 @@
+html
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chris's Hedgehog Party</title>
+    <style>
+        body {
+            background-color: #f0f0ff; /* Light purple-ish background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full screen height */
+            margin: 0;
+            overflow: hidden; /* No scrollbars */
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Text above animations */
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            color: #ff00ff; /* Bright magenta */
+            text-shadow: 2px 2px 4px #00ffff; /* Cyan glow */
+        }
+        /* Rotating Hedgehogs */
+        .hedgehog {
+            position: absolute;
+            width: 100px;
+            animation: spin 4s linear infinite;
+        }
+        #hedge1 { top: 10%; left: 10%; }
+        #hedge2 { top: 10%; right: 10%; }
+        #hedge3 { bottom: 10%; left: 10%; }
+        #hedge4 { bottom: 10%; right: 10%; }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        /* Flashy Smileys */
+        .smiley {
+            position: absolute;
+            width: 80px;
+            animation: flash 1s infinite;
+        }
+        #smile1 { top: 20%; left: 25%; }
+        #smile2 { top: 20%; right: 25%; }
+        #smile3 { bottom: 20%; left: 25%; }
+        #smile4 { bottom: 20%; right: 25%; }
+        @keyframes flash {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
 <body>
-  <h1>My First GitHub Page</h1>
-  <p>Hello from repo1!</p>
-  <p>Check out my text file in folder1yo/local2push.txt</p>
+    <div class="container">
+        <h1>HELLO CHRIS, THANKS FOR GIVING ME THE TASK.<br>THIS IS MY FIRST WESITE USING GIT HUB!<br>AND THANK YOU TO GROK TOO!!!</h1>
+    </div>
+    <!-- Hedgehog GIFs -->
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2RjNHN6eXFjdjVqN3kydTZmNmFjYzYxY3RwdDM2bTVudDV5eDVwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge1">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2RjNHN6eXFjdjVqN3kydTZmNmFjYzYxY3RwdDM2bTVudDV5eDVwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge2">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2RjNHN6eXFjdjVqN3kydTZmNmFjYzYxY3RwdDM2bTVudDV5eDVwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge3">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2RjNHN6eXFjdjVqN3kydTZmNmFjYzYxY3RwdDM2bTVudDV5eDVwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge4">
+    <!-- Smiley GIFs -->
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGZhZG5xYTdjb2RrdjVzeXJkcjJtdmI1a2s2a3k3aXFuYzVscjdobSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile1">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGZhZG5xYTdjb2RrdjVzeXJkcjJtdmI1a2s2a3k3aXFuYzVscjdobSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile2">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGZhZG5xYTdjb2RrdjVzeXJkcjJtdmI1a2s2a3k3aXFuYzVscjdobSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile3">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGZhZG5xYTdjb2RrdjVzeXJkcjJtdmI1a2s2a3k3aXFuYzVscjdobSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile4">
 </body>
 </html>

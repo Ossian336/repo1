@@ -6,9 +6,9 @@ html
     <title>Chris's Psychedelic Party</title>
     <style>
         body {
-            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000);
-            background-size: 400% 400%;
-            animation: psychedelic 10s ease infinite;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff9900, #ff00ff, #00ff00, #ff0000);
+            background-size: 600% 600%;
+            animation: psychedelic 5s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,19 +18,22 @@ html
         }
         @keyframes psychedelic {
             0% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
             50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
             100% { background-position: 0% 0%; }
         }
         .container {
             text-align: center;
             position: relative;
-            z-index: 2; /* Text above animations */
+            z-index: 2;
         }
         h1 {
             font-family: Arial, sans-serif;
             font-size: 36px;
-            color: #ffffff; /* White for contrast */
-            text-shadow: 2px 2px 8px #ff00ff, -2px -2px 8px #00ffff; /* Glow effect */
+            color: #ffffff;
+            text-shadow: 2px 2px 8px #ff00ff, -2px -2px 8px #00ffff;
+            margin: 0;
         }
         /* Rotating Hedgehogs */
         .hedgehog {
@@ -73,13 +76,14 @@ html
             0%, 100% { transform: scale(1); opacity: 1; }
             50% { transform: scale(1.1); opacity: 0.8; }
         }
-        /* Confetti */
+        /* Bursting Confetti */
         .confetti {
             position: absolute;
             width: 10px;
             height: 10px;
             background-color: #ff0000;
-            animation: fall linear infinite;
+            border-radius: 50%;
+            animation: burstFall linear infinite;
             z-index: 0;
         }
         .confetti:nth-child(odd) { background-color: #00ff00; }
@@ -93,9 +97,10 @@ html
         #conf7 { left: 70%; animation-duration: 5s; }
         #conf8 { left: 80%; animation-duration: 4s; }
         #conf9 { left: 90%; animation-duration: 3.5s; }
-        @keyframes fall {
-            0% { top: -10%; opacity: 1; }
-            100% { top: 110%; opacity: 0; }
+        @keyframes burstFall {
+            0% { top: -10%; opacity: 1; transform: scale(1); }
+            50% { transform: scale(1.5); opacity: 0.7; }
+            100% { top: 110%; opacity: 0; transform: scale(0.5); }
         }
     </style>
 </head>
@@ -103,19 +108,15 @@ html
     <div class="container">
         <h1>HELLO CHRIS, THANKS FOR GIVING ME THE TASK.<br>THIS IS MY FIRST WESITE USING GIT HUB!<br>AND THANK YOU TO GROK TOO!!!</h1>
     </div>
-    <!-- Hedgehog GIFs -->
-    <img src="https://www.animatedimages.org/data/media/1467/animated-hedgehog-image-0016.gif" class="hedgehog" id="hedge1">
-    <img src="https://www.animatedimages.org/data/media/1467/animated-hedgehog-image-0016.gif" class="hedgehog" id="hedge2">
-    <img src="https://www.animatedimages.org/data/media/1467/animated-hedgehog-image-0016.gif" class="hedgehog" id="hedge3">
-    <img src="https://www.animatedimages.org/data/media/1467/animated-hedgehog-image-0016.gif" class="hedgehog" id="hedge4">
-    <!-- Flashy Smiley GIFs -->
-    <img src="https://www.animatedimages.org/data/media/108/animated-smiley-image-0078.gif" class="smiley" id="smile1">
-    <img src="https://www.animatedimages.org/data/media/108/animated-smiley-image-0078.gif" class="smiley" id="smile2">
-    <img src="https://www.animatedimages.org/data/media/108/animated-smiley-image-0078.gif" class="smiley" id="smile3">
-    <img src="https://www.animatedimages.org/data/media/108/animated-smiley-image-0078.gif" class="smiley" id="smile4">
-    <!-- Shining Sun with Sunglasses -->
-    <img src="https://www.animatedimages.org/data/media/694/animated-sun-image-0039.gif" class="sun">
-    <!-- Confetti -->
+    <img src="https://media.giphy.com/media/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge1">
+    <img src="https://media.giphy.com/media/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge2">
+    <img src="https://media.giphy.com/media/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge3">
+    <img src="https://media.giphy.com/media/26BRv0vvGMmxx4pL2/giphy.gif" class="hedgehog" id="hedge4">
+    <img src="https://media.giphy.com/media/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile1">
+    <img src="https://media.giphy.com/media/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile2">
+    <img src="https://media.giphy.com/media/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile3">
+    <img src="https://media.giphy.com/media/xT0GqrClDHK1pFZkZy/giphy.gif" class="smiley" id="smile4">
+    <img src="https://media.giphy.com/media/l0Iyau7QcKtKUYq36/giphy.gif" class="sun">
     <div class="confetti" id="conf1"></div>
     <div class="confetti" id="conf2"></div>
     <div class="confetti" id="conf3"></div>
